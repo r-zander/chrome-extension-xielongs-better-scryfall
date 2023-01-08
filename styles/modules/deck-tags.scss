@@ -1,0 +1,71 @@
+.control-panel-crumbs.top-navigation {
+  align-items: center;
+
+  > .deck-count {
+    font-size: 13px;
+
+    &[title] {
+      border-bottom: 1px dotted;
+      margin-bottom: 1px;
+      cursor: help;
+    }
+  }
+}
+
+.control-panel-crumbs.deck-tags {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -6px;
+
+  > span {
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 13px;
+  }
+
+  > .button-n {
+    margin-top: 6px;
+    margin-left: 0;
+    margin-right: 6px;
+  }
+}
+
+.control-panel-table {
+  @for $i from 0 through 20 {
+    &.hide-tag-formats-#{$i} {
+      > tbody > tr:not(.tagged-format-#{$i}) {
+        display: none;
+      }
+    }
+    &.hide-tag-tags-#{$i} {
+      > tbody > tr:not(.tagged-tag-#{$i}) {
+        display: none;
+      }
+    }
+  }
+}
+
+.deck-table-filters {
+  > td > .color-filter {
+    //display: flex;
+    //flex-direction: row;
+
+    > .filter-color-button {
+      min-width: 23px;
+      height: 20px;
+    }
+  }
+
+  > .filter-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.filter-color-button {
+  > .card-symbol {
+    margin-top: -2px;
+    cursor: pointer;
+  }
+}
