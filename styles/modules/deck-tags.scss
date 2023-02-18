@@ -47,6 +47,24 @@
 }
 
 .deck-table-filters {
+  > td.name-filter {
+    padding-left: 20px;
+    > .name-filter-field {
+      width: 100%;
+      padding-left: 26px;
+      padding-top: 7px;
+      padding-bottom: 5px;
+      background-image: url('modules/search-field.svg');
+      background-size: 16px auto;
+      background-position: 0 7px;
+
+      font: inherit;
+      color: #343242;
+
+      border-bottom: 1px solid #E0DEE3;
+    }
+  }
+
   > td > .color-filter {
     //display: flex;
     //flex-direction: row;

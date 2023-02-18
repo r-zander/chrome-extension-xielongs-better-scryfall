@@ -2,10 +2,11 @@ import {ContentScriptFeature} from "../core/ContentScriptModule";
 
 /**
  * TODO
+ *  - WIP: Color filter
  *  - Add text filter to find decks
- *  - Color filter
  *  - Maybe: Empty state
  *  - Maybe: Show count per filter button
+ *  - Save latest filter state in some storage
  *
  */
 
@@ -51,6 +52,12 @@ const options: Options = {
         }, {
             deckName: '🏗️',
             filterName: '🏗️ WIP'
+        }, {
+            deckName: '🧪',
+            filterName: '🧪 Testing'
+        }, {
+            deckName: '🐣',
+            filterName: '🐣 Starter'
         }, {
             deckName: '📝',
             filterName: '📝 Reference'
@@ -133,7 +140,9 @@ export class DeckOverviewFiltering implements ContentScriptFeature {
     private initInlineFilterBar() {
         const html = // @formatter:off
 `<tr class="deck-table-filters">
-    <td class="name-filter"></td>
+    <td class="name-filter">
+        <input id="deck-table-name-filter" class="name-filter-field" />
+    </td>
     <td>
         <span class="color-filter"> 
             <button class="button-n icon-only filter-color-button conjoined-left" data-color="W" title="Filter for White decks">
