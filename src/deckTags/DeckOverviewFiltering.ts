@@ -66,8 +66,8 @@ const options: Options = {
             display: '👻',
             filterName: '👻 Not owned'
         }, {
-            deckName: '😪',
-            filterName: '😪 Retired'
+            deckName: '💤',
+            filterName: '💤 Retired'
         },
     ],
 };
